@@ -1,90 +1,76 @@
-# [Project Name]
+# Recify - Recipe Finder
 
-Created by [team member], [team member], and [team member].
+Created by Braily Guzman
 
 ## 🚀 Mission statement
 
-Our application, [app name] is for [target audience]. It allows users to [what it does and why audience would use it]
+Our application, Recify is for home cooks and food enthusiasts. It allows users to search for recipes based on ingredients they have dietary preference or metal type. This will help users discover new dishes and make meal planning easier.
 
 ## API & React Router
 
-This application will use the [name of API] API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
+This application will use the Spoonacular API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
 
-- Link to API documentation: [Link goes here]
-- API endpoint #1
-  - Description of endpoint
-  - List of data values used by the endpoint
-- API endpoint #2
-  - Description of endpoint
-  - List of data values used by the endpoint
-- API endpoint #3
-  - Description of endpoint
-  - List of data values used by the endpoint
+- Link to API documentation: https://spoonacular.com/food-api/docs
+- API endpoint #1 `/recipes/random`
+  - Fetches random recipes to show on the landing page
+- API endpoint #2 `/recipes/complexSearch`
+  - Fetches a list of recipes based on user input
+  - Used data values: `id`, `title`, `image`, `summary`
+- API endpoint #3 `/recipes/{id}/information`
+  - Fetches detailed information about a selected recipe.
+  - Used data values: `id`, `title`, `image`, `ingredients`, `readyInMinutes`
+- Extra: API endpoint #4 `/recipes/findByIngredients`
+  - Fetches recipes based on available ingredients
+  - Used data values: `id`, `title`, `image`, `missedIngredientCount`
 
-[If your API requires an API key, say so here.]
-
-**Example:**
-- https://api.artic.edu/api/v1/artworks
-  - This will fetch an array of artwork objects
-  - For each artwork, I want the `id`, `title`, and `image_id`
-- https://api.artic.edu/api/v1/artworks/{id}
-  - This will fetch a single artwork object
-  - I will use the `id`, `title`, `short_description`, `medium_display`, `place_of_origin` and `image_id`
-- https://api.artic.edu/api/v1/artworks/search?q={query}
-  - This will fetch a list of artworks that relate to the search query
-  - For each artwork, I will use the `id` and `title`
+[This API requires an API key. We will securely store and manage the key in the environment variables.]
 
 ## 👩‍💻 MVP User Stories & Frontend Routes
 
 The application will feature the following frontend routes and core features:
 
-* On the `/example` page, users can...
-* On the `/example` page, users can...
-* On the `/example` page, users can...
-
-**Example:**
-- On the `/artworks` page, users can view a grid of all artwork
-- On the `/artworks` page, users can click on a piece of art in the grid, taking them to the details page for that piece of art.
-- On the `/artworks/:artworkId` page, users can view additional details for a single piece of art
-- On the `/` page, users can search for artwork titles related to a search term.
+- On the `/` page, users can see random recipes and search recipes.
+- On the `/recipes` page, users can **view a list of recipes matching their search criteria**.
+- On the `/recipes/:recipeId` page, users can **see detailed information about a specific recipe, including ingredients and instructions**.
 
 ## 🤔 Stretch User Stories
 
 If time permits, the following stretch features will be implemented in order of priority:
 
-* Users will be able to...
-* Users will be able to...
-* Users will be able to...
-
-**Example:**
-* Users will be able to save and view favorited artworks using local storage
-* Users will be able to change the color scheme of the website from light mode to dark mode
+- Users will be able to **save and view their favorite recipes using local storage**.
+- Users will be able to **filter recipe based on dietary preferences (vegan, gluten-free, etc.).**
+- Users will be able to **generate a shopping list based on selected recipes.**
 
 ## 📆 Timeline for reaching MVP in 1 week
 
 To ensure that we can complete all core features of the application in 1 week, we will aim to complete tasks according to the following timeline:
 
 **Day 1**
+
 - [ ] Ticket description and due date
 - [ ] Ticket description and due date
 - [ ] Ticket description and due date
 
 **Day 2**
+
 - [ ] Ticket description and due date
 - [ ] Ticket description and due date
 - [ ] Ticket description and due date
 
 **Day 3** (MVP due by the end of the day)
+
 - [ ] Ticket description and due date
 - [ ] Ticket description and due date
 - [ ] Ticket description and due date
 
 **Day 4**
+
 - [ ] Ticket description and due date
 - [ ] Ticket description and due date
 - [ ] Ticket description and due date
 
 **Day 5**
+
 - [ ] Ticket description and due date
 - [ ] Ticket description and due date
 - [ ] Ticket description and due date
