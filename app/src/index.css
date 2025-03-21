@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+  --font-3xl: 1.875rem;
+  --font-4xl: 2.25rem;
+  --font-5xl: 3rem;
+
+  --line-height-base: 1.5;
+
+  --gap-sm: 0.5rem;
+  --gap-md: 1rem;
+  --gap-lg: 1.5rem;
+  --gap-xl: 2rem;
+  --gap-2xl: 3rem;
+
+  --padding-xs: 0.25rem;
+  --padding-sm: 0.5rem;
+  --padding-md: 1rem;
+  --padding-lg: 1.5rem;
+  --padding-xl: 2rem;
+  --padding-2xl: 3rem;
+  --padding-3xl: 4rem;
+
+  --radius-none: 0;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* Dark Mode */
+:root {
+  --text: #f5eee1;
+  --background: #181206;
+  --primary: #eac882;
+  --secondary: #a0700f;
+  --accent: #f9b835;
+  color-scheme: dark;
+}
+
+/* Light Mode */
+.light {
+  --text: #1f170a;
+  --background: #f9f3e7;
+  --primary: #7e5b15;
+  --secondary: #f0c060;
+  --accent: #cb8906;
+  color-scheme: light;
+}
+
+body {
+  font-size: 1rem;
+  background-color: var(--background);
+  color: var(--text);
+}
