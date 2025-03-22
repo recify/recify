@@ -55,6 +55,7 @@ html {
   --primary: #eac882;
   --secondary: #a0700f;
   --accent: #f9b835;
+  --border: rgba(255, 255, 255, 0.1);
   color-scheme: dark;
 }
 
@@ -65,6 +66,7 @@ html {
   --primary: #7e5b15;
   --secondary: #f0c060;
   --accent: #cb8906;
+  --border: rgba(0, 0, 0, 0.1);
   color-scheme: light;
 }
 
@@ -72,4 +74,9 @@ body {
   font-size: 1rem;
   background-color: var(--background);
   color: var(--text);
+}
+
+:focus {
+  /* border-color: var(--accent); */
+  outline-color: var(--accent);
 }
