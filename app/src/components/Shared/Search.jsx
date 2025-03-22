@@ -1,3 +1,5 @@
+import './Search.styles.css';
+
 const Search = ({ query, setQuery }) => {
   return (
     <input
