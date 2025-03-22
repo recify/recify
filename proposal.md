@@ -11,12 +11,12 @@ Our application, Recify is for home cooks and food enthusiasts. It allows users 
 This application will use the Spoonacular API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
 
 - Link to API documentation: https://www.themealdb.com/api.php
-- API endpoint #1 `/api/json/v1/1/random.php`
+- API endpoint #1 `/random.php`
   - Fetches random recipes to show on the landing page
-- API endpoint #2 `/api/json/v1/1/search.php?s=Pizza`
+- API endpoint #2 `/search.php?s=Pizza`
   - Fetches a list of recipes based on user input
   - Used data values: `name`
-- API endpoint #3 `/api/json/v1/1/lookup.php?i=52772`
+- API endpoint #3 `/lookup.php?i=52772`
   - Fetches detailed information about a selected recipe.
 
 This API does not require an API key.
