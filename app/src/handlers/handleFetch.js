@@ -1,6 +1,10 @@
-const handleFetch = async (url, opts = {}) => {
+import { baseURL } from '../constants.js';
+
+const handleFetch = async (endpoint, opts = {}) => {
+  const ep = `${baseURL}/${endpoint}`;
+
   try {
-    const response = fetch(url, opts);
+    const response = fetch(ep, opts);
     const { ok, status, statusText, headers } = response;
 
     if (!ok) {
