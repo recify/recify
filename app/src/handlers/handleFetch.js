@@ -4,16 +4,14 @@ const handleFetch = async (endpoint, opts = {}) => {
   const ep = `${baseURL}/${endpoint}`;
 
   try {
-    const response = fetch(ep, opts);
-    const { ok, status, statusText, headers } = response;
+    const response = await fetch(ep, opts);
+    const { ok, status, statusText } = response;
 
     if (!ok) {
       throw new Error(`Fetch failed with status code ${status}, ${statusText}`);
     }
 
-    const isJson = headers.get('Content-Type').includes('application/json');
-
-    const data = await (isJson ? response.json() : response.text());
+    const data = await response.json();
 
     return [data, null];
   } catch (error) {
