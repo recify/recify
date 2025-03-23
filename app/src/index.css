@@ -46,6 +46,10 @@ html {
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
   --radius-full: 9999px;
+
+  --gutters: 1rem;
+  --opacity: 0.7;
+  --underline-offset: 5px;
 }
 
 /* Dark Mode */
@@ -74,9 +78,15 @@ body {
   font-size: 1rem;
   background-color: var(--background);
   color: var(--text);
+  padding: var(--gutters);
 }
 
 :focus {
   /* border-color: var(--accent); */
   outline-color: var(--accent);
+}
+
+a {
+  color: var(--text);
+  text-underline-offset: var(--underline-offset);
 }
