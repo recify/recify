@@ -42,7 +42,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home-container">
+    <section id="section-home">
       <Search query={query} setQuery={setQuery} />
       <section className="generated">
         <h2 className="generated-title">Generated Recipes For You!</h2>
@@ -57,7 +57,7 @@ const Home = () => {
             ))}
         </div>
       </section>
-    </div>
+    </section>
   );
 };
 
