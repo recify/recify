@@ -46,6 +46,10 @@ html {
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
   --radius-full: 9999px;
+
+  --gutters: 1rem;
+  --opacity: 0.7;
+  --underline-offset: 5px;
 }
 
 /* Dark Mode */
@@ -55,6 +59,7 @@ html {
   --primary: #eac882;
   --secondary: #a0700f;
   --accent: #f9b835;
+  --border: rgba(255, 255, 255, 0.1);
   color-scheme: dark;
 }
 
@@ -65,6 +70,7 @@ html {
   --primary: #7e5b15;
   --secondary: #f0c060;
   --accent: #cb8906;
+  --border: rgba(0, 0, 0, 0.1);
   color-scheme: light;
 }
 
@@ -72,4 +78,15 @@ body {
   font-size: 1rem;
   background-color: var(--background);
   color: var(--text);
+  padding: var(--gutters);
+}
+
+:focus {
+  /* border-color: var(--accent); */
+  outline-color: var(--accent);
+}
+
+a {
+  color: var(--text);
+  text-underline-offset: var(--underline-offset);
 }

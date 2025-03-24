@@ -1,0 +1,33 @@
+.generated-title {
+  text-align: center;
+  padding: var(--gutters) 0;
+}
+
+.recipe-display-container {
+  display: flex;
+  gap: var(--gutters);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe-display {
+  margin: var(--gutters) 0;
+  padding: var(--gutters);
+  border-radius: var(--radius-md);
+  text-align: center;
+  width: 350px;
+  background-color: var(--secondary);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.25s linear;
+}
+
+.recipe-display:hover {
+  opacity: var(--opacity);
+}
+
+.recipe-display-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
