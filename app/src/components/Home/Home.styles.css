@@ -1,4 +1,4 @@
-.home-container {
+#section-home {
   display: flex;
   flex-direction: column;
   align-items: center;

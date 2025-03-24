@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--secondary);
+  height: 75px;
+}
+
+.header-links-theme-container {
+  display: flex;
+}
+
+.header-links-theme-container svg {
+  font-size: var(--font-3xl);
+}
