@@ -49,6 +49,7 @@ const Home = () => {
               name={recipe.strMeal}
               image={recipe.strMealThumb}
               id={recipe.idMeal}
+              recipeDetails={recipe}
               key={recipe.idMeal}
             />
           ))}

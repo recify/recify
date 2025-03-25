@@ -8,6 +8,8 @@
   gap: var(--gutters);
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .recipe-display {
@@ -15,10 +17,14 @@
   padding: var(--gutters);
   border-radius: var(--radius-md);
   text-align: center;
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   background-color: var(--secondary);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   transition: opacity 0.25s linear;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutters);
 }
 
 .recipe-display:hover {
