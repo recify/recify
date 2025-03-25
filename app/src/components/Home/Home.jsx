@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Search from '../Shared/Search.jsx';
 import handleFetch from '../../handlers/handleFetch.js';
 import { randomEP } from '../../constants.js';
 import RecipeDisplay from './RecipeDisplay.jsx';
@@ -22,7 +21,6 @@ const fetchRandomRecipes = async () => {
 };
 
 const Home = () => {
-  const [query, setQuery] = useState('');
   const [generated, setGenerated] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -43,20 +41,18 @@ const Home = () => {
 
   return (
     <section id="section-home">
-      <Search query={query} setQuery={setQuery} />
-      <section className="generated">
-        <h2 className="generated-title">Generated Recipes For You!</h2>
-        <div className="recipe-display-container">
-          {!loading &&
-            generated.map((recipe) => (
-              <RecipeDisplay
-                name={recipe.strMeal}
-                image={recipe.strMealThumb}
-                id={recipe.idMeal}
-              />
-            ))}
-        </div>
-      </section>
+      <h2 className="generated-title">Generated Recipes For You!</h2>
+      <div className="recipe-display-container">
+        {!loading &&
+          generated.map((recipe) => (
+            <RecipeDisplay
+              name={recipe.strMeal}
+              image={recipe.strMealThumb}
+              id={recipe.idMeal}
+              key={recipe.idMeal}
+            />
+          ))}
+      </div>
     </section>
   );
 };
