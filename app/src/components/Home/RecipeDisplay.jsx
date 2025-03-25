@@ -1,17 +1,20 @@
-import { NavLink } from 'react-router';
+import { Link } from 'react-router';
 import './RecipeDisplay.styles.css';
 
-const RecipeDisplay = ({ name, image, id }) => {
-  // On click, navigate to the Recipe page.
+const RecipeDisplay = ({ name, image, id, recipeDetails }) => {
   return (
-    <NavLink className="recipe-display" to={`/recipe/${id}`}>
+    <Link
+      className="recipe-display"
+      to={`/recipe/${id}`}
+      state={{ recipeDetails: recipeDetails }}
+    >
       <img
         className="recipe-display-image"
         src={image}
         alt={`Image of ${name}`}
       />
       <h3 className="recipe-display-title">{name}</h3>
-    </NavLink>
+    </Link>
   );
 };
 
