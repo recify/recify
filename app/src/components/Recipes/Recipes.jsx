@@ -19,7 +19,6 @@ const Recipes = () => {
 
       const [data] = await handleFetch(searchEP(query));
 
-      console.log(data);
       setFound(data.meals);
 
       setLoading(false);
