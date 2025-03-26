@@ -43,33 +43,26 @@ To ensure that we can complete all core features of the application in 1 week, w
 
 **Day 1**
 
-- [ ] https://github.com/recify/recify/issues/1 - Due Mar 20 at 11:59 PM
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [x] React Boilerplate - Due Mar 20 at 11:59 PM
+- [x] React Router - Due Mar 20 at 11:59 PM
 
 **Day 2**
 
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [x] Home page - Due Mar 21 at 11:59 PM
+- [x] Home page styling - Due Mar 21 at 11:59 PM
 
 **Day 3** (MVP due by the end of the day)
 
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [x] Header and styling - Due Mar 22 at 11:59 PM
+- [x] Header Styling - Due Mar 22 at 11:59 PM
 
 **Day 4**
 
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [x] Recipes page - Due Mar 22 at 11:59 PM
 
 **Day 5**
 
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [x] Single Recipe page - Due Mar 22 at 11:59 PM
 
 ## Wireframes of each page in your application
 
