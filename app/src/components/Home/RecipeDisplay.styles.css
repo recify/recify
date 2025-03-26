@@ -8,8 +8,9 @@
   gap: var(--gutters);
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .recipe-display {

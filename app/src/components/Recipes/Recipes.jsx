@@ -1,14 +1,19 @@
-import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import handleFetch from '../../handlers/handleFetch.js';
 import { searchEP } from '../../constants.js';
 import RecipeDisplay from '../Home/RecipeDisplay.jsx';
+import Search from '../Shared/Search.jsx';
+import SearchContext from '../../context/SearchContext.js';
+import { FaTimes } from 'react-icons/fa';
 
 const Recipes = () => {
   const [found, setFound] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const query = useLocation().pathname.split('/')[2];
+  const urlQuery = useLocation().pathname.split('/')[2];
+  const [_, setQuery] = useContext(SearchContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,9 +22,10 @@ const Recipes = () => {
       }
       setLoading(true);
 
-      const [data] = await handleFetch(searchEP(query));
+      const [data] = await handleFetch(searchEP(urlQuery));
 
-      console.log(data);
+      setQuery(urlQuery);
+
       setFound(data.meals);
 
       setLoading(false);
@@ -27,11 +33,16 @@ const Recipes = () => {
 
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]); // if we add found as a dependency, the effect re-runs
+  }, [urlQuery]); // if we add found as a dependency, the effect re-runs
 
   return (
     <section id="recipes">
+      <Search />
       <div className="recipe-display-container">
+        <FaTimes
+          className="recipe-close-button"
+          onClick={() => navigate('/')}
+        />
         {loading && <p>Loading...</p>}
         {found ? (
           found.map((recipe) => (

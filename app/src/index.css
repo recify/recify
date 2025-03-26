@@ -94,3 +94,7 @@ a {
   color: var(--text);
   text-underline-offset: var(--underline-offset);
 }
+
+li {
+  list-style: none;
+}

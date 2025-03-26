@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import handleFetch from '../../handlers/handleFetch.js';
 import { randomEP } from '../../constants.js';
 import RecipeDisplay from './RecipeDisplay.jsx';
 import './Home.styles.css';
+import Search from '../Shared/Search.jsx';
+import SearchContext from '../../context/SearchContext.js';
 
 const fetchRandomRecipes = async () => {
   const generatedRecipes = [];
@@ -23,8 +25,11 @@ const fetchRandomRecipes = async () => {
 const Home = () => {
   const [generated, setGenerated] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [_, setQuery] = useContext(SearchContext);
 
   useEffect(() => {
+    setQuery('');
+
     const fetchData = async () => {
       setLoading(true);
       const recipes = await fetchRandomRecipes();
@@ -37,10 +42,12 @@ const Home = () => {
     };
 
     fetchData();
-  }, []);
+  }, [setQuery]);
 
   return (
     <section id="section-home">
+      <Search />
+
       <h2 className="generated-title">Generated Recipes For You!</h2>
       <div className="recipe-display-container">
         {!loading &&
