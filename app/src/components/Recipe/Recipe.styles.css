@@ -42,21 +42,29 @@
 
 .recipe-info h2 {
   padding: var(--gutters);
-  border: 2px solid var(--border);
+  border: 2px solid var(--accent);
 }
 
 .recipe-image-video-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: var(--gutters);
+  width: 100%;
 }
 
 .recipe-image {
   border-radius: var(--radius-md);
-  width: 400px;
+  width: 50%;
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: var(--accent);
+}
+
+.recipe-video {
+  width: 50%;
+  height: 300px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--accent);
 }
 
 .recipe-ingredients-container,

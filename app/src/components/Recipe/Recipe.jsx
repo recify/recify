@@ -74,6 +74,7 @@ const Recipe = () => {
           <iframe
             width="400"
             height="300"
+            className="recipe-video"
             src={`https://www.youtube.com/embed/${youtube.split('=')[1]}`}
           ></iframe>
         </div>
