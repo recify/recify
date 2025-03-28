@@ -67,7 +67,7 @@ const Recipe = () => {
       <div className="recipe-header">
         <h1>{name}</h1>
       </div>
-      <div className="recipe-'fo-container">
+      <div className="recipe-info-container">
         <div className="recipe-image-video-container">
           <img src={image} className="recipe-image" alt={`Image of ${name}`} />
 
